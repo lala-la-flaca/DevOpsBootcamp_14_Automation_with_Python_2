@@ -101,7 +101,6 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
                   ]
         )
      ```
-  <img src="" width=800 />
 
 10. Apply the same logic to instances in Paris.
 ```bash
@@ -128,10 +127,13 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
  <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/8.png" width=800 />
 
 11. Tags on AWS
+
     Frankfurt:
+
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/frankfurt%20tags.png" width=800/>
     
     Paris:
+
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/paris%20tags%20aws%20console.PNG" width=800/>
     
     
