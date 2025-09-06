@@ -27,13 +27,13 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
 ## Adding Tags to EC2 Instances
 1. Add instances in Paris and Frankfurt in the AWS console.
    
-3. Import boto3 module.
+2. Import boto3 module.
    ```bash
    import boto3
    ```
    <img src="" width=800 />
    
-4. Initialize clients for each region
+3. Initialize clients for each region
    ```bash
     #Setting up Clients
     ec2_client_paris  = boto3.client('ec2', region_name="eu-west-3")
@@ -41,7 +41,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
    ```
    <img src="" width=800 />
    
-5. Initialize resources for each region
+4. Initialize resources for each region
    ```bash
      #Setting Up Resources
      ec2_resource_frankfurt = boto3.resource('ec2',region_name="eu-central-1")
@@ -49,7 +49,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
    ```
    <img src="" width=800 />
    
-6. Getting all available instances.
+5. Getting all available instances.
    ```bash
        #Getting Information about instances
       all_available_instances_frankfurt = ec2_client_frankfurt.describe_instances()
@@ -57,7 +57,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
    ```
    <img src="" width=800 />
    
-7. Create an empty list to save the instance IDs for each region
+6. Create an empty list to save the instance IDs for each region
 
    ```bash
       #Empty list to save instance IDs
@@ -67,13 +67,13 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
    ```
    <img src="" width=800 />
    
-8. Obtain reservations to access available instances
+7. Obtain reservations to access available instances
     ```bash
     #Getting Reservations to access EC2 instances available
     reservations_frankfurt = all_available_instances_frankfurt["Reservations"]
     reservations_paris = all_available_instances_paris["Reservations"]
     ```
-9. Iterate to obtain the store instance id.
+8. Iterate to obtain the store instance id.
     ```bash
         for reservation in reservations_frankfurt:
         instances_frankfurt = reservation['Instances']
@@ -86,20 +86,20 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
     ```
     <img src="" width=800 />
     
-10. Add tags to EC2
+09. Add tags to EC2
     ```bash
-      #Creating Tags for Frankfurt Instances
-      response_frankfurt = ec2_resource_frankfurt.create_tags(
-          Resources=instances_ids_frankfurt,
-          Tags=[
-              {
-                  'Key': 'environment',
-                  'Value': 'prod'
-              },
-              ]
-    )
-   ```
-<img src="" width=800 />
+          #Creating Tags for Frankfurt Instances
+          response_frankfurt = ec2_resource_frankfurt.create_tags(
+              Resources=instances_ids_frankfurt,
+              Tags=[
+                  {
+                      'Key': 'environment',
+                      'Value': 'prod'
+                  },
+                  ]
+        )
+     ```
+  <img src="" width=800 />
 
 10. Apply the same logic to instances in Paris.
 ```bash
@@ -125,5 +125,5 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
   ```
 <img src="" width=800 />
 
-11. Results
+11. Tags on AWS
     
