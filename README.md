@@ -64,13 +64,13 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
     ```
 8. Iterate to obtain the store instance id.
     ```bash
-      for reservation in reservations_frankfurt:
-      instances_frankfurt = reservation['Instances']
-  
-      for instance in instances_frankfurt:
-          #EC2 Instance parameters
-          ec2_id = instance["InstanceId"]
-          instances_ids_frankfurt.append(ec2_id)
+        for reservation in reservations_frankfurt:
+        instances_frankfurt = reservation['Instances']
+    
+            for instance in instances_frankfurt:
+                #EC2 Instance parameters
+                ec2_id = instance["InstanceId"]
+                instances_ids_frankfurt.append(ec2_id)
 
     ```
 9. Add tags to EC2
