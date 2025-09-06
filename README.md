@@ -1,7 +1,7 @@
 # 🐍Module 14 – Automation with Python
 This exercise is part of Module 14: Automation with Python. Module 14 focuses on automating cloud operations with Python. The demos showcase how to interact with AWS services (EC2, EKS, snapshots), perform monitoring tasks, and implement recovery workflows. By the end of this module, you will have practical experience in scripting infrastructure automation, monitoring, and recovery solutions.
 
-# 📦Demo 2 – Automate Configuring EC2 Server Instances
+# 📦Demo 2 – Automate Configuring EC2 Instances
 # 📌 Objective
 Automate adding environment tags to all EC2 instances using Python.
 
