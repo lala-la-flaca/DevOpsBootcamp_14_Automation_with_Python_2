@@ -31,7 +31,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
    ```bash
    import boto3
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/2.PNG" width=800 />
    
 3. Initialize clients for each region
    ```bash
@@ -39,7 +39,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
     ec2_client_paris  = boto3.client('ec2', region_name="eu-west-3")
     ec2_client_frankfurt = boto3.client('ec2', region_name="eu-central-1")
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/3.PNG" width=800 />
    
 4. Initialize resources for each region
    ```bash
@@ -47,7 +47,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
      ec2_resource_frankfurt = boto3.resource('ec2',region_name="eu-central-1")
      ec2_resource_paris = boto3.resource('ec2',region_name="eu-west-3")
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/4.PNG" width=800 />
    
 5. Getting all available instances.
    ```bash
@@ -55,7 +55,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
       all_available_instances_frankfurt = ec2_client_frankfurt.describe_instances()
       all_available_instances_paris = ec2_client_paris.describe_instances()
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/5.png" width=800 />
    
 6. Create an empty list to save the instance IDs for each region
 
@@ -65,7 +65,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
       instances_ids_frankfurt = []
       instances_ids_paris = []
    ```
-   <img src="" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/6.png" width=800 />
    
 7. Obtain reservations to access available instances
     ```bash
@@ -73,6 +73,8 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
     reservations_frankfurt = all_available_instances_frankfurt["Reservations"]
     reservations_paris = all_available_instances_paris["Reservations"]
     ```
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/7.png" width=800/> 
+    
 8. Iterate to obtain the store instance id.
     ```bash
         for reservation in reservations_frankfurt:
@@ -84,7 +86,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
                 instances_ids_frankfurt.append(ec2_id)
 
     ```
-    <img src="" width=800 />
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/8.png" width=800 />
     
 09. Add tags to EC2
     ```bash
@@ -126,4 +128,10 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
 <img src="" width=800 />
 
 11. Tags on AWS
+    Frankfurt:
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/frankfurt%20tags.png" width=800/>
+    
+    Paris:
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/paris%20tags%20aws%20console.PNG" width=800/>
+    
     
