@@ -73,7 +73,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
     reservations_frankfurt = all_available_instances_frankfurt["Reservations"]
     reservations_paris = all_available_instances_paris["Reservations"]
     ```
-    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/7.png" width=800/> 
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/rser.PNG" width=800 /> 
     
 8. Iterate to obtain the store instance id.
     ```bash
@@ -86,7 +86,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
                 instances_ids_frankfurt.append(ec2_id)
 
     ```
-    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/8.png" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/7.png" width=800/> 
     
 09. Add tags to EC2
     ```bash
@@ -125,7 +125,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
               ]
       )
   ```
-<img src="" width=800 />
+ <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/8.png" width=800 />
 
 11. Tags on AWS
     Frankfurt:
