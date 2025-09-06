@@ -91,7 +91,7 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
         for reservation in reservations_paris:
           instances_paris = reservation['Instances']
       
-          for instance in instances_paris:
+            for instance in instances_paris:
               #EC2 Instance parameters
               ec2_id = instance["InstanceId"]
               instances_ids_paris.append(ec2_id)
@@ -106,5 +106,4 @@ Create a Python script to fetch and display EC2 instance statuses and extend it 
               },
               ]
       )
-
 ```
